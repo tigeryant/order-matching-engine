@@ -9,7 +9,9 @@ The two most common algorithms used for order matching are known as price/time p
 ### Overview
 The control flow of the program is detailed by the flowchart shown below. At runtime, `main()` initialises many of the data structures used by the rest of the application. An order is generated and passed to one side of the order book. If the order book is not empty, `match()` is called. It selects the best quote on either side of the book and consummates a trade if each order satisfies a certain price.
 
-![Control flow image](https://i.imgur.com/rELEZrD.png)
+<div>
+  <img src="https://i.imgur.com/rELEZrD.png" width="500">
+  </div>
 
 ### Order generation and sampling
 Mention limit and market orders here
@@ -27,13 +29,17 @@ Each list used by the program (`buy_book`, `sell_book`, and `fill_book`) is asso
 ### Update GUI
 The contents of the caches listed above are inserted into a `Treeview`, which is a structure used by the `Tkinter` GUI module for displaying tabular data. The image below shows the output. It contains three tables which display the bids, offers and filled orders.
 
-![GUI screenshot](https://i.imgur.com/N3SEd82.png)
+<div>
+  <img src="https://i.imgur.com/N3SEd82.png" width="650">
+  </div>
 
 ## Challenges
 ### Concurrency and multiprocessing
 The original architecture of this program used a model based on concurrency through multiprocessing pools. Due to various bugs in this version, the decision was made to opt for a single-threaded model without multiprocessing. Below is a flowchart that illustrates the control flow of the original program.
 
-![Multiprocessed control flow](https://i.imgur.com/8LWFVen.png)
+<div>
+  <img src="https://i.imgur.com/8LWFVen.png" width="650">
+  </div>
 
 ## Future developments
 This section details parts of the program that could be improved in a subsequent release and features that could be added.
