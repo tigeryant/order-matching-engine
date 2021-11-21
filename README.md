@@ -18,6 +18,7 @@ Add image here
 
 ## Challenges
 ### Concurrency and multiprocessing
+Add image here
 
 ## Future developments
 ### Depth chart
