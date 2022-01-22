@@ -14,7 +14,6 @@ The control flow of the program is detailed by the flowchart shown below. At run
   </div>
 
 ### Order generation and sampling
-Mention limit and market orders here
 In order to create dummy data for the `match()` function to process, and to simulate the activity of buyers and sellers on the market, orders are generated according to certain parameters. These parameters determine all the characteristics of the order, including their quantity and type (market or limit). The price of the order is determined by taking samples from a normal distribution. This is a relatively trivial process thanks to the `random.normalvariate()` method.
 
 ### Update book
