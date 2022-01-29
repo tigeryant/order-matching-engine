@@ -9,9 +9,9 @@ The two most common algorithms used for order matching are known as price/time p
 ### Overview
 The control flow of the program is detailed by the flowchart shown below. At runtime, `main()` initialises many of the data structures used by the rest of the application. An order is generated and passed to one side of the order book. If the order book is not empty, `match()` is called. It selects the best quote on either side of the book and consummates a trade if each order satisfies a certain price.
 
-<div>
+<p align="center">
   <img src="https://i.imgur.com/rELEZrD.png" width="500">
-  </div>
+  </p>
 
 ### Order generation and sampling
 In order to create dummy data for the `match()` function to process, and to simulate the activity of buyers and sellers on the market, orders are generated according to certain parameters. These parameters determine all the characteristics of the order, including their quantity and type (market or limit). The price of the order is determined by taking samples from a normal distribution. This is a relatively trivial process thanks to the `random.normalvariate()` method.
@@ -28,17 +28,17 @@ Each list used by the program (`buy_book`, `sell_book`, and `fill_book`) is asso
 ### Update GUI
 The contents of the caches listed above are inserted into a `Treeview`, which is a structure used by the `Tkinter` GUI module for displaying tabular data. The image below shows the output. It contains three tables which display the bids, offers and filled orders.
 
-<div>
+<p align="center">
   <img src="https://i.imgur.com/N3SEd82.png" width="650">
-  </div>
+  </p>
 
 ## Challenges
 ### Concurrency and multiprocessing
 The original architecture of this program used a model based on concurrency through multiprocessing pools. Due to various bugs in this version, the decision was made to opt for a single-threaded model without multiprocessing. Below is a flowchart that illustrates the control flow of the original program.
 
-<div>
+<p align="center">
   <img src="https://i.imgur.com/8LWFVen.png" width="650">
-  </div>
+  </p>
 
 ## Future developments
 This section details parts of the program that could be improved in a subsequent release and features that could be added.
